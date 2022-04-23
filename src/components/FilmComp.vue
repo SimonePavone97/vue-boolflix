@@ -1,36 +1,47 @@
 <template>
     <main>
+        
+    
+    <CardComp
+      v-for="( element, index ) in FilmsArray"
+      :key="index"
+      :title="element.title"
+      :original_title="element.original_title"
+      :original_language="element.original_language"
+      :vote_average="element.vote_average"
+    />
 
+  
     </main>
 </template>
 
 <script>
-    //Importiamo axios
+    
     import axios from 'axios';
+    import CardComp from '../components/CardComp.vue'
+    
 
     export default {
-        //Cambiare il nome con quello del componente creato
         name: 'FilmComp',
+        components: {
+            CardComp
+        },
+
         data() {
             return {
-                //Creare un array dove salvare i data della chiamata axios
-                //Modificare il nome a piacere
+                
                 FilmsArray: []
             }
         },
         created() {
-            //Qui utiliziamo axios
-            //Modificare il link con l'api che si vuole usare
+           
             axios.get(
-                    'https://api.themoviedb.org/3/search/movie?api_key=e9b260822f54b240e9160b0ae763ca01&query=Spiderman&language=it-IT'
+                    'https://api.themoviedb.org/3/search/movie?api_key=e9b260822f54b240e9160b0ae763ca01&query=ritorno+al+futuro'
                     )
                 .then((res) => {
-                    //Controllo delle informazioni che otteniamo alla chiamata
                     console.log(res.data.results);
-                    //Modifica dell'array dove salveremo i dati
                     this.FilmsArray = res.data.results
                 })
-                //Salvataggio in console di possibili errori
                 .catch((error) => {
                     console.log(error)
                 })
