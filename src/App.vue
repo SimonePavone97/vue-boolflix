@@ -30,7 +30,7 @@
     },
     methods: {
       metodoSearch(text) {
-        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.api_key}&query=${text}`)
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.api_key}&query=${text}&language=it-IT`)
           .then((res) => {
 
             console.log(res.data.results);
@@ -38,7 +38,7 @@
             this.FilmsArray = res.data.results
           })
 
-        axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${this.api_key}&query=${text}`)
+        axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${this.api_key}&query=${text}&language=it-IT`)
           .then((res) => {
 
             console.log(res.data.results);
