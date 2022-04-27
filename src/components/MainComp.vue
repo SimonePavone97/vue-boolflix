@@ -1,7 +1,7 @@
 <template>
   <div>
     <FilmsComp :arrayFilm2="arrayFilm"
-      v-for="( element, index ) in FilmsArray"
+      v-for="( element, index ) in arrayFilm"
       :key="index"
       :title="element.title"
       :original_title="element.original_title"
@@ -9,9 +9,9 @@
       :vote="element.vote_average"
     />
 
-    <SeriesComp :arraySerie2="arraySeries"
-      v-for="( subelement, subindex ) in SeriesArray"
-      :key="subindex"
+    <SeriesComp :arraySerie2="arraySerie"
+      v-for="( subelement, subindex ) in arraySerie"
+      :key="'a'+ subindex"
       :title="subelement.name"
       :original_title="subelement.original_name"
       :language="subelement.original_language"
