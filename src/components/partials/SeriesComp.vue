@@ -1,6 +1,8 @@
 <template>
   <div class="col">
-    <div class="bg-dark text-white p-3 card">
+    <div class="bg-dark text-white p-3 card"
+      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/w342/${poster_path} )` }">
+      >
       <h2 class="text-white mb-5">Series</h2>
       <h5 class="card-title"> {{name}}</h5>
       <h6 class="card-title">{{original_name}}</h6>
@@ -12,7 +14,7 @@
         </span>
       </div>
 
-      <span class="">{{vote}}</span>
+      <span class="card-text">Voto: {{vote}}</span>
     </div>
 
   </div>
@@ -24,11 +26,14 @@
     name: 'SeriesComp',
     props: {
       arraySerie2: Array,
+      poster_path: Image,
       name: String,
       original_name: String,
       language: String,
       vote: Number,
     }
+
+
 
   }
 </script>
@@ -52,5 +57,14 @@
 
   .flag-unknown {
     background-image: url('../../assets/Ellipse 1.png');
+  }
+
+  .card {
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
   }
 </style>
