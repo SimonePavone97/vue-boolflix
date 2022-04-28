@@ -1,7 +1,7 @@
 <template>
   <div class="col">
     <div class="bg-dark text-white p-3 card"
-      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/originalhttps://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg )` }">
+      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/w342${poster_path} )` }">
       <h2 class="text-white mb-5">Films</h2>
       <h5 class="card-title">Titolo: {{title}}</h5>
       <h6 class="card-title">Titolo Originale: {{original_title}}</h6>
@@ -25,7 +25,7 @@
     name: 'FilmsComp',
     props: {
       arrayFilm2: Array,
-      poster_path: Image,
+      poster_path: String,
       title: String,
       original_title: String,
       language: String,

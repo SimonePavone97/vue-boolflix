@@ -1,8 +1,8 @@
 <template>
   <div class="col">
     <div class="bg-dark text-white p-3 card"
-      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/w342/${poster_path} )` }">
-      >
+      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/w342${poster_path} )` }">
+      
       <h2 class="text-white mb-5">Series</h2>
       <h5 class="card-title"> {{name}}</h5>
       <h6 class="card-title">{{original_name}}</h6>
@@ -26,7 +26,7 @@
     name: 'SeriesComp',
     props: {
       arraySerie2: Array,
-      poster_path: Image,
+      poster_path: String,
       name: String,
       original_name: String,
       language: String,
