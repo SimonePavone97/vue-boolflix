@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-danger bg-danger">
       <div class="container-fluid">
         <img class="img-fluid" src="../assets/Netflix-PNG-File.png" alt="">
         <form class="d-flex">

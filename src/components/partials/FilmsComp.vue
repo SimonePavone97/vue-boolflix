@@ -1,7 +1,7 @@
 <template>
   <div class="col">
-    <div class="bg-dark text-white p-3 card"
-      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/w342${poster_path} )` }">
+    <div class="bg-dark text-white center p-3 card"
+      :style="{ backgroundImage: `url( https://image.tmdb.org/t/p/w342${poster_path})`}">
       <h2 class="text-white mb-5">Films</h2>
       <h5 class="card-title">Titolo: {{title}}</h5>
       <h6 class="card-title">Titolo Originale: {{original_title}}</h6>
@@ -61,7 +61,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  }
+
+  .center{
+    background-position: center;
   }
 </style>
